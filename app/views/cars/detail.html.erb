@@ -1,0 +1,43 @@
+<div class="container">
+<p> <%= flash[:pesan] %></p>
+<div class="card text-bg-dark mb-12" >
+  <div class="card-header">
+   <div class="row">
+  <div class="col-md-6">
+		Details  
+	</div>
+  <div class="col-md-6" align="right">
+	<a href="/cars/" class="btn btn-primary" ><span class="icon">
+                                <i class="fa fa-arrow-left"></i>
+                            </span>
+                            <span class="text">
+                                Kembali
+                            </span></a>
+  </div>
+  
+  </div>
+  </div>
+  <div class="card-body">
+
+  
+  <div class="mb-3">
+	<label for="merk" class="form-label">Merk</label>
+	<input class="form-control" type="text" name ="merk" id="merk" value ="<%= @data.merk %>" placeholder="Merk"  required>
+  </div>
+
+	<div class="mb-3">
+		<label for="publish" class="form-label">Publish</label>
+		<input class="form-control" type="text" name ="publish" id="publish" value ="<%= @data.publish %>" placeholder="Publish"  required>
+	
+	</div>
+	
+	<div class="mb-3">
+		<label for="harga" class="form-label">Harga</label>
+		<input class="form-control" type="text" name ="harga" id="harga" value ="<%= @data.harga %>" placeholder="Harga" required>
+	</div>
+		
+
+
+  </div>
+</div>
+</div>

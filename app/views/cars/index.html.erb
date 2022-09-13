@@ -1,0 +1,43 @@
+<p>
+<div class="container">
+<div class="card text-bg-dark mb-12" >
+<div class="card-header">Pesan</div>
+
+  <div class="card-body">
+		<p> <%= flash[:pesan] %></p>
+  </div>
+ </div>
+<p>
+<div class="card text-bg-dark mb-12" >
+  <div class="card-header">Daftar Mobil </div>
+  <div class="card-body">
+  <a class="btn btn-success" href="/cars/input">Tambah Data</a><p>
+ <table  class="table table-dark table-striped" border=1>
+<tr> 
+    <td> No</td>
+	<td> Merk </td>
+	<td> Publish</td>
+	<td> Harga</td>
+	<td> Action</td>
+</tr>
+<% 
+		@no=0
+		
+		@data.each do |value|
+		@no=@no+1
+		
+ %>
+<tr>
+     <td><%= @no %></td>
+	<td><%= value.merk %></td>
+	<td><%= value.publish %>
+	<td><%= value.harga %>
+	<td><a href="/cars/edit/<%=value.id %>" class="btn btn-primary" >Edit</a> <a  class="btn btn-success" href="/cars/detail/<%=value.id %>">Detail</a> 
+	<a class ="btn btn-danger" href="/cars/delete/<%=value.id %>" onClick="return confirm('Yakin Hapus Data ?')">Hapus</a> 
+	</td> 
+</tr>
+<% end %>
+<table> 
+  </div>
+</div>
+</div>

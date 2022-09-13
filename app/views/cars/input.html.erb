@@ -1,0 +1,50 @@
+<div class="container">
+<p> <%= flash[:pesan] %></p>
+<div class="card text-bg-dark mb-12" >
+  <div class="card-header">
+   <div class="row">
+  <div class="col-md-6">
+		Tambah  
+	</div>
+  <div class="col-md-6" align="right">
+	<a href="/cars/" class="btn btn-primary" ><span class="icon">
+                                <i class="fa fa-arrow-left"></i>
+                            </span>
+                            <span class="text">
+                                Kembali
+                            </span></a>
+  </div>
+  
+  </div>
+  </div>
+  <div class="card-body">
+  <%= form_tag("/cars/create") do %>
+  
+  <div class="mb-3">
+	<label for="merk" class="form-label">Merk</label>
+	<input class="form-control" type="text" name ="merk" id="merk" placeholder="Merk" required>
+  </div>
+
+	<div class="mb-3">
+		<label for="publish" class="form-label">Publish</label>
+		<input class="form-control" type="text" name ="publish" id="publish" placeholder="Publish" required>
+	
+	</div>
+	
+	<div class="mb-3">
+		<label for="harga" class="form-label">Harga</label>
+		<input class="form-control" type="text" name ="harga" id="harga" placeholder="Harga" required>
+	</div>
+		
+<input type="submit" class ="btn btn-primary" value ="Simpan">
+<input type="reset" class ="btn btn-primary" value ="Reset">
+
+<% end %>
+  </div>
+</div>
+</div>
+
+
+
+
+
